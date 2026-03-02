@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Phonoteka - Descubre y Colecciona Vinilos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body data-theme="light"> 
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo">La Phonoteka</a>
+            <!-- Search bar -->
+            <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="text" placeholder="¿Qué buscas hoy?">
+            </div>
+            <!-- Navigation bar -->
+            <nav class="user-actions">
+                <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+                <a href="register.html" class="btn btn-primary">Registrarse</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Theme toggle">
+                    <span class="material-icons icon-light">light_mode</span>
+                    <span class="material-icons icon-dark">dark_mode</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Descubre, Colecciona y Vende Vinilos</h1>
+                <p>El punto de encuentro para amantes de la música en formato físico.</p>
+            </div>
+        </section>
+
+        <!-- Galery of vinyls -->
+        <section class="vinyl-gallery">
+            <div class="container">
+                <div class="vinyl-grid">
+                    <!-- Data will be generated automatically with js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 La Phonoteka. Hecho con ❤️ para coleccionistas.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

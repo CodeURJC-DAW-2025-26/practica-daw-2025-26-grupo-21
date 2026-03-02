@@ -1,0 +1,17 @@
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.form-group-checkbox input {
+  width: auto;
+}
+
+.form-group-checkbox label {
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Vinilo - La Phonoteka</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/vinyl.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body data-theme="light">
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">La Phonoteka</a>
+            <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="text" placeholder="Buscar en la colección...">
+            </div>
+            <nav class="user-actions">
+                <a href="login.html" class="btn btn-secondary">Iniciar Sesión</a>
+                <a href="register.html" class="btn btn-primary">Registrarse</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <span class="material-icons icon-light">light_mode</span>
+                    <span class="material-icons icon-dark">dark_mode</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="vinyl-detail-layout">
+            <div class="vinyl-display-column">
+                <img src="https://picsum.photos/seed/vinyl1/600/600" alt="Cover of The Dark Side of the Moon" class="vinyl-detail-image">
+                <h1>The Dark Side of the Moon</h1>
+                <h2>by Pink Floyd</h2>
+                <p class="vinyl-description">
+                    Un álbum conceptual y el octavo de estudio de la banda británica de rock progresivo. Es considerado una obra cumbre del rock y uno de los álbumes más vendidos de todos los tiempos.
+                </p>
+            </div>
+
+            <div class="purchase-info-column">
+                <a href="profile.html" class="profile-card-link">
+                    <div class="seller-profile-card">
+                        <img src="https://i.pravatar.cc/80?u=a.morales.2019" alt="Avatar del vendedor"
+                            class="seller-avatar">
+                        <div class="seller-info">
+                            <span class="seller-username">a.morales.2019</span>
+                            <div class="seller-rating">
+                                <span class="material-icons">star</span>
+                                <span class="material-icons">star</span>
+                                <span class="material-icons">star</span>
+                                <span class="material-icons">star</span>
+                                <span class="material-icons">star_half</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="price-box">
+                    <span class="price-label">Precio</span>
+                    <span class="price-amount">35,00 €</span>
+                </div>
+                <button class="btn btn-primary btn-full-width add-to-cart-btn">
+                    <span class="material-icons">shopping_cart</span>
+                    <p>Añadir al carrito</p>
+                </button>
+                <button class="btn btn-secondary btn-full-width contact-seller-btn">Contactar con el vendedor</button>
+
+                <section class="reviews-section">
+                    <h3>Valoraciones</h3>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">GrooveGuardian</span>
+                            <div class="review-rating"><span class="material-icons">star</span><span
+                                    class="material-icons">star</span><span class="material-icons">star</span><span
+                                    class="material-icons">star</span><span class="material-icons">star_border</span>
+                            </div>
+                        </div>
+                        <p class="review-comment">"El vinilo llegó en perfecto estado y muy rápido."</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">WaxWizard</span>
+                            <div class="review-rating"><span class="material-icons">star</span><span
+                                    class="material-icons">star</span><span class="material-icons">star</span><span
+                                    class="material-icons">star</span><span class="material-icons">star</span></div>
+                        </div>
+                        <p class="review-comment">"¡Una joya! Comunicación excelente."</p>
+                    </div>
+                </section>
+                </div>
+                </div>
+
+                <section class="similar-vinyls-section">
+                    <h2>También te podría interesar</h2>
+                    <div class="vinyl-grid-similar">
+                        <div class="vinyl-card-small"><img src="https://picsum.photos/seed/similar1/100/100">
+                            <div class="card-content-small">
+                                <h4 class="vinyl-title-small">Wish You Were Here</h4>
+                                <p class="vinyl-artist-small">Pink Floyd</p>
+                            </div>
+                        </div>
+                        <div class="vinyl-card-small"><img src="https://picsum.photos/seed/similar2/100/100">
+                            <div class="card-content-small">
+                                <h4 class="vinyl-title-small">IV</h4>
+                                <p class="vinyl-artist-small">Led Zeppelin</p>
+                            </div>
+                        </div>
+                        <div class="vinyl-card-small"><img src="https://picsum.photos/seed/similar3/100/100">
+                            <div class="card-content-small">
+                                <h4 class="vinyl-title-small">OK Computer</h4>
+                                <p class="vinyl-artist-small">Radiohead</p>
+                            </div>
+                        </div>
+                        <div class="vinyl-card-small"><img src="https://picsum.photos/seed/similar4/100/100">
+                            <div class="card-content-small">
+                                <h4 class="vinyl-title-small">The Wall</h4>
+                                <p class="vinyl-artist-small">Pink Floyd</p>
+                            </div>
+                        </div>
+                        <div class="vinyl-card-small"><img src="https://picsum.photos/seed/similar5/100/100">
+                            <div class="card-content-small">
+                                <h4 class="vinyl-title-small">Animals</h4>
+                                <p class="vinyl-artist-small">Pink Floyd</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </main>
+
+                <footer class="footer">
+                    <div class="container">
+                        <p>&copy; 2025 La Phonoteka. Hecho con ❤️ para coleccionistas.</p>
+                    </div>
+                </footer>
+
+                <script src="../js/script.js"></script>
+                </body>
+
+                </html>

@@ -1,0 +1,184 @@
+/* --- Vinyl Detail Page Layout --- */
+.vinyl-detail-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+    padding: 3rem 0;
+}
+
+.vinyl-detail-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--border-radius-md);
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(var(--shadow-color-rgb), 0.2);
+}
+
+.vinyl-display-column h1 { 
+    font-size: 2.8rem; 
+    font-weight: 700; 
+    margin-bottom: 0.5rem; 
+}
+
+.vinyl-display-column h2 { 
+    font-size: 1.5rem; 
+    font-weight: 400; 
+    color: var(--text-secondary); 
+    margin-bottom: 1.5rem; 
+}
+
+.vinyl-description { 
+    line-height: 1.7; 
+    font-size: 1.1rem; 
+}
+
+/* --- Purchase & Seller Column --- */
+
+.profile-card-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.purchase-info-column {
+    position: sticky;
+    top: 110px; 
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.seller-profile-card, .price-box {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 1.5rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.seller-profile-card { 
+    display: flex; 
+    align-items: center; 
+    gap: 2rem;
+}
+
+.seller-avatar { 
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.seller-username { 
+    font-weight: 700; 
+    font-size: 1.6rem; 
+}
+
+.seller-rating .material-icons, .review-rating .material-icons { 
+    color: var(--accent-color); 
+    font-size: 1.6rem; 
+}
+.price-box { text-align: center; }
+.price-label { display: block; font-size: 1rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
+.price-amount { font-size: 2.5rem; font-weight: 700; color: var(--accent-color); }
+
+.add-to-cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.2rem;
+}
+
+.contact-seller-btn {
+    padding: 1.2rem;
+}
+
+/* --- Reviews Section --- */
+.reviews-section {
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.reviews-section h3, .similar-vinyls-section h2 {
+    font-size: 1.5rem; /* Adjusted size */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.review-card {
+    background-color: transparent; /* Makes it blend with the sidebar */
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 1rem 0;
+    margin-bottom: 0;
+}
+.review-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+.review-author { font-weight: 700; }
+.review-comment { font-size: 0.9rem; }
+
+
+/* --- Similar Vinyls Section --- */
+.similar-vinyls-section {
+    margin: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+}
+
+.vinyl-grid-similar {
+    display: grid;
+    /* This creates 5 flexible columns */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.vinyl-card-small {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.2s ease-out;
+}
+.vinyl-card-small:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(var(--shadow-color-rgb), 0.15);
+}
+.vinyl-card-small img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+.vinyl-title-small {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.vinyl-artist-small {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* --- Responsive for Mobile --- */
+@media (max-width: 992px) {
+    .vinyl-detail-layout {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+    .purchase-info-column {
+        position: static; /* Remove sticky positioning */
+        margin-top: 2rem;
+        order: -1; /* Puts purchase info above the description on mobile */
+    }
+    .vinyl-grid-similar {
+        grid-template-columns: 1fr; /* Stack recommended vinyls vertically */
+    }
+}

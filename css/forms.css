@@ -1,0 +1,90 @@
+/* Form global sytles */
+
+/* This container centers the form on the page */
+.form-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 24px;
+  min-height: calc(100vh - 81px); /* Viewport height minus header height */
+}
+
+/* This is the compact white/dark box for the form */
+.form-wrapper {
+  background-color: var(--surface-color);
+  padding: 2.5rem; /* A bit more padding */
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 420px; /* This keeps the form compact */
+  box-shadow: 0 8px 20px rgba(var(--shadow-color-rgb), 0.1);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-wrapper h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-primary); 
+}
+
+/* This ensures labels appear above the inputs */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block; /* Makes the label take its own line */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+/* This makes inputs take the full width of the compact form */
+.form-group input {
+  width: 100%; 
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color) 25%, transparent);
+}
+
+.btn-full-width {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.form-links {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.form-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.form-links a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.form-links span {
+  color: var(--text-secondary);
+  margin: 0 8px;
+}

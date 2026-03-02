@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - La Phonoteka</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/forms.css"> <link rel="stylesheet" href="../css/edit-profile.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">La Phonoteka</a>
+            <nav class="user-actions">
+                <a href="profile.html" class="btn btn-secondary">Ver Perfil</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <span class="material-icons icon-light">light_mode</span>
+                    <span class="material-icons icon-dark">dark_mode</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-page-container">
+        <div class="form-wrapper">
+            <h2>Editar Perfil</h2>
+            <form>
+                <div class="edit-avatar-section">
+                    <img src="https://i.pravatar.cc/150?u=a.morales.2019" alt="Avatar actual" id="avatar-preview" class="profile-avatar-edit">
+                    <label for="avatar-upload" class="btn btn-secondary">Cambiar foto</label>
+                    <input type="file" id="avatar-upload" name="avatar" accept="image/*" hidden>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Nombre de usuario</label>
+                    <input type="text" id="username" name="username" value="a.morales.2019" required>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Biografía</label>
+                    <textarea id="bio" name="bio" rows="4">Entusiasta de los vinilos de rock progresivo y jazz. Coleccionando desde 2010.</textarea>
+                </div>
+
+                <hr class="form-divider">
+                <h3>Cambiar Contraseña</h3>
+
+                <div class="form-group">
+                    <label for="current-password">Contraseña actual</label>
+                    <input type="password" id="current-password" name="current-password">
+                </div>
+                <div class="form-group">
+                    <label for="new-password">Nueva contraseña</label>
+                    <input type="password" id="new-password" name="new-password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-new-password">Confirmar nueva contraseña</label>
+                    <input type="password" id="confirm-new-password" name="confirm-new-password">
+                </div>
+                
+                <div class="form-actions">
+                    <a href="profile.html" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>

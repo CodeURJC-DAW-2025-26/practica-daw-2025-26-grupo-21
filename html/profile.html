@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - La Phonoteka</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">La Phonoteka</a>
+            <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="text" placeholder="Buscar en la colección...">
+            </div>
+            <nav class="user-actions">
+                <button class="cart-button" id="cart-btn" aria-label="View shopping cart">
+                    <span class="material-icons">shopping_cart</span>
+                    <span class="cart-badge" id="cart-count">3</span>
+                </button> 
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <span class="material-icons icon-light">light_mode</span>
+                    <span class="material-icons icon-dark">dark_mode</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="profile-layout">
+
+            <section class="profile-main-content">
+                <nav class="tab-nav">
+                    <button class="tab-button active" data-target="tab-selling">Vinilos en Venta</button>
+                    <button class="tab-button" data-target="tab-reviews">Valoraciones Recibidas</button>
+                </nav>
+
+                <div id="tab-selling" class="tab-content active">
+                    <h3>Actualmente en venta</h3>
+                    <div class="vinyl-grid">
+                        <div class="vinyl-card"><img src="https://picsum.photos/seed/profile1/400/400"><div class="card-content"><h3 class="vinyl-title">AM</h3><p class="vinyl-artist">Arctic Monkeys</p><div class="card-footer"><span class="vinyl-genre">Indie Rock</span><span class="vinyl-price">33,50 €</span></div></div></div>
+                        <div class="vinyl-card"><img src="https://picsum.photos/seed/profile2/400/400"><div class="card-content"><h3 class="vinyl-title">Currents</h3><p class="vinyl-artist">Tame Impala</p><div class="card-footer"><span class="vinyl-genre">Psychedelic Pop</span><span class="vinyl-price">38,00 €</span></div></div></div>
+                        <div class="vinyl-card"><img src="https://picsum.photos/seed/profile3/400/400"><div class="card-content"><h3 class="vinyl-title">Is This It</h3><p class="vinyl-artist">The Strokes</p><div class="card-footer"><span class="vinyl-genre">Indie Rock</span><span class="vinyl-price">25,00 €</span></div></div></div>
+                    </div>
+                </div>
+
+                <div id="tab-reviews" class="tab-content">
+                    <h3>Valoraciones recibidas por otros usuarios</h3>
+                     <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">GrooveGuardian</span>
+                            <div class="review-rating"><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span></div>
+                        </div>
+                        <p class="review-comment">"El vinilo llegó en perfecto estado y muy rápido. ¡Vendedor muy recomendable!"</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <span class="review-author">WaxWizard</span>
+                            <div class="review-rating"><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span></div>
+                        </div>
+                        <p class="review-comment">"¡Una joya! Comunicación excelente."</p>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="profile-sidebar">
+                <div class="profile-card">
+                    <img src="https://i.pravatar.cc/150?u=a.morales.2019" alt="Avatar de a.morales.2019" class="profile-avatar">
+                    <h2 class="profile-username">a.morales.2019</h2>
+                    <p class="profile-member-since">Miembro desde Jul 2025</p>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">12</span>
+                            <span class="stat-label">Ventas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">5</span>
+                            <span class="stat-label">Valoraciones</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-rating">
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star</span>
+                        <span class="material-icons">star_half</span>
+                    </div>
+
+                    <div class="profile-actions">
+                        <a href="edit-profile.html" class="btn btn-primary btn-full-width">Editar Perfil</a>
+                        <button class="btn btn-secondary btn-full-width">Enviar Mensaje</button>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 La Phonoteka. Hecho con ❤️ para coleccionistas.</p>
+        </div>
+    </footer>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>
