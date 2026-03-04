@@ -1,80 +1,72 @@
 # La Phonoteka
 
+## Team Members
 
-## Integrantes
+| Name | Surname | Email | GitHub |
+| ------ | --------- | ------ | ------- |
+| Adrián | Morales | a.morales.2019@alumnos.urjc.es | Adri-md-1208 |
 
-| Nombre | Apellidos | Correo | GitHub
-| ------ | --------- | ------ | -------
-| Adrián | Morales | a.morales.2019@alumnos.urjc.es | Adri-md-1208
+# Preparation 1: Project Definition
 
-# Preparación 1: Definición del proyecto
+## Project Overview
+La Phonoteka is an online platform dedicated to the buying and selling of vinyl records. It allows users to register, list vinyl records for sale, make purchases, and rate other users.
 
-## Descripción general del proyecto
-La Phonoteka es una plataforma online dedicada a la compra y venta de vinilos. Permite a los usuarios registrarse, publicar vinilos en venta, realizar compras y valorar a otros usuarios.
+## Entities
 
-## Entidades
+### User
+Represents a registered person on the platform.
 
-### Usuario
-Representa una persona registrada en la plataforma.
+### Vinyl
+Represents an item that can be bought or sold on the platform.
 
-### Vinilo
-Representa un objeto que se puede comprar/vender en la plataforma.
+### Transaction
+Represents a buying or selling action of a Vinyl entity.
 
-### Compra/Venta
-Representa una acción de compra o venta de una entidad Vinilo.
+### Rating
+Represents a review/rating given by a User to another User after a Transaction has taken place between them.
 
-### Mensaje
-Representa un mensaje privado de un Usuario hacia otro Usuario.
-
-### Valoración
-Representa una valoración que realiza un Usuario acerca de otro Usuario tras realizar una Compra/Venta entre ellos.
-
-La relación se tiene porque un Usuario realiza Compra/Venta de un Vinilo y puede recibir/dar una Valoración. Los Usuarios pueden escribirse mensajes entre ellos.
+The relationship exists because a User makes a Transaction for a Vinyl and can receive/give a Rating.
 
 ![ER Diagram](assets/diagrams/ERD.svg)
 
-## Permisos de los usuarios
-Claro, aquí tienes la información en una tabla Markdown.
+## User Permissions
 
-| Funcionalidad | Anónimo | Registrado | Administrador | Descripción |
+| Feature | Anonymous | Registered | Administrator | Description |
 | :--- | :---: | :---: | :---: | :--- |
-| **Visualizar vinilos** | Sí | Sí | Sí | Todos pueden ver los vinilos disponibles. |
-| **Buscar vinilos** | Sí | Sí | Sí | Búsqueda por artista, título, género, etc. |
-| **Ver detalles de vinilo** | Sí | Sí | Sí | Acceso a la información completa de un vinilo. |
-| **Registrarse** | Sí | No | No | Solo usuarios anónimos pueden registrarse. |
-| **Iniciar sesión** | Sí | No | No | Solo usuarios anónimos pueden iniciar sesión. |
-| **Cerrar sesión** | No | Sí | Sí | |
-| **Publicar vinilo en venta** | No | Sí | Sí | Un usuario registrado puede poner sus vinilos a la venta. |
-| **Editar/Eliminar vinilo propio** | No | Sí | Sí | Solo el propietario del vinilo o un administrador pueden editarlo/eliminarlo. |
-| **Comprar un vinilo** | No | Sí | Sí | Los usuarios registrados pueden realizar compras. |
-| **Ver historial de compras/ventas** | No | Sí | Sí | Cada usuario ve su propio historial. |
-| **Enviar mensaje a otro usuario** | No | Sí | Sí | Comunicación entre usuarios. |
-| **Ver/responder mensajes** | No | Sí | Sí | Acceso a la bandeja de entrada/salida. |
-| **Dejar una valoración** | No | Sí | Sí | Valorar transacciones o a otros usuarios. |
-| **Modificar perfil propio** | No | Sí | Sí | Cambiar datos personales, avatar, etc. |
-| **Gestionar todos los vinilos** | No | No | Sí | CRUD completo sobre todos los vinilos de la plataforma. |
-| **Gestionar todos los usuarios** | No | No | Sí | CRUD completo sobre todos los usuarios de la plataforma. |
-| **Ver estadísticas de la plataforma** | No | No | Sí | Acceso a los gráficos y métricas del sistema. |
+| **View vinyl records** | Yes | Yes | Yes | Everyone can see the available vinyl records. |
+| **Search vinyl records** | Yes | Yes | Yes | Search by artist, title, genre, etc. |
+| **View vinyl details** | Yes | Yes | Yes | Access to the complete information of a vinyl record. |
+| **Register** | Yes | No | No | Only anonymous users can register. |
+| **Log in** | Yes | No | No | Only anonymous users can log in. |
+| **Log out** | No | Yes | Yes | |
+| **List vinyl for sale** | No | Yes | Yes | A registered user can put their vinyl records up for sale. |
+| **Edit/Delete own vinyl** | No | Yes | Yes | Only the owner of the vinyl or an administrator can edit/delete it. |
+| **Buy a vinyl** | No | Yes | Yes | Registered users can make purchases. |
+| **View purchase/sale history** | No | Yes | Yes | Each user sees their own history. |
+| **Leave a rating** | No | Yes | Yes | Rate transactions or other users. |
+| **Modify own profile** | No | Yes | Yes | Change personal data, avatar, etc. |
+| **Manage all vinyl records** | No | No | Yes | Full CRUD on all vinyl records on the platform. |
+| **Manage all users** | No | No | Yes | Full CRUD on all users on the platform. |
+| **View platform statistics** | No | No | Yes | Access to the system's charts and metrics. |
 
-## Imágenes
+## Images
 
-La aplicación contiene varios tipos de imágenes:
+The application contains several types of images:
 
-- **Foto de perfil**: foto opcional que se podrá subir al crear el perfil o al modificarlo. 1 usuario tiene 0 o 1 fotos.
-- **Foto de vinilo**: foto obligatoria del vinilo que el usuario va a vender. 1 Vinilo tiene 1 foto.
+- **Profile picture**: Optional photo that can be uploaded when creating or modifying a profile. 1 user has 0 or 1 photos.
+- **Vinyl picture**: Mandatory photo of the vinyl the user is going to sell. 1 Vinyl has 1 photo.
 
-## Gráficos
+## Charts
 
-La aplicación ofrecerá gráficos a los administradores para que tengan una visión general del estado de la plataforma:
+The application will offer charts to administrators so they can have a general overview of the platform's status:
 
-- **Ventas a lo largo del tiempo** (gráfico de líneas)
-- **Nuevos registros de usuarios** (gráfico de líneas)
-- **Distribución de vinilos en base a sus atributos** (gráfico de tarta)
-- **Usuarios más vendedores y más compradores** (gráfico de ranking)
+- **Sales over time** (line chart)
+- **New user registrations** (line chart)
+- **Vinyl distribution based on attributes** (pie chart)
+- **Top selling and top buying users** (ranking chart)
 
-## Tecnología complementaria
-Envío automático de mails para avisar a los usuarios cuando ha sido vendido su vinilo o cuando han recibido un comentario.
+## Complementary Technology
+Automated email sending to notify users when their vinyl has been sold or when they have received a comment/rating.
 
-
-## Algoritmo o consulta avanzada
-Búsqueda avanzada con filtros por atributos de los vinilos o por valoraciones de los usuarios.
+## Advanced Algorithm or Query
+Vinyl recommendations for registered users while they are viewing a vinyl record. They will appear at the bottom of the page. Recommendations will be based on the attributes of the vinyl records they have already purchased.
