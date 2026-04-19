@@ -1,0 +1,151 @@
+/* --- Shared Admin Management Styles --- */
+
+.admin-header {
+    margin: 3rem 0 2rem;
+}
+
+.admin-header h1 {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+}
+
+.admin-header p {
+    color: var(--text-secondary);
+}
+
+/* Table Design */
+.table-wrapper {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    overflow: hidden; /* To keep border-radius in corners */
+    box-shadow: 0 4px 15px rgba(var(--shadow-color-rgb), 0.1);
+    margin-bottom: 4rem;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-table thead {
+    background-color: color-mix(in srgb, var(--surface-color) 90%, black);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.admin-table th {
+    padding: 1.25rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.admin-table td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+/* Cell Elements */
+.user-cell, .vinyl-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-cell img, .vinyl-cell img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.vinyl-cell img {
+    border-radius: var(--border-radius-sm);
+}
+
+.table-main-text {
+    font-weight: 700;
+    margin: 0;
+}
+
+.table-sub-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Badges and Indicators */
+.badge {
+    padding: 4px 10px;
+    border-radius: var(--border-radius-lg);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.badge-admin { background-color: var(--accent-color); color: var(--bg-color); }
+.badge-user { background-color: var(--border-color); color: var(--text-primary); }
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+
+.status-indicator::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent-secondary); /* Gruvbox Greenish */
+}
+
+.price-cell {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* Action Buttons */
+.actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    width: 36px;
+    height: 36px;
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-btn.edit { color: var(--accent-secondary); }
+.action-btn.delete { color: var(--accent-color); }
+
+.action-btn:hover {
+    background-color: var(--bg-color);
+    border-color: var(--text-secondary);
+}
+
+.action-btn .material-icons { font-size: 1.2rem; }
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .admin-table thead { display: none; }
+    .admin-table td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid var(--border-color);
+        padding-left: 50%;
+        position: relative;
+    }
+}

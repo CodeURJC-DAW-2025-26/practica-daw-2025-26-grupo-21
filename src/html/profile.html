@@ -39,6 +39,7 @@
                 <nav class="tab-nav">
                     <button class="tab-button active" data-target="tab-selling">Vinilos en Venta</button>
                     <button class="tab-button" data-target="tab-reviews">Valoraciones Recibidas</button>
+                    <button class="tab-button" data-target="tab-history">Historial de Compras</button>
                 </nav>
 
                 <div id="tab-selling" class="tab-content active">
@@ -52,7 +53,7 @@
 
                 <div id="tab-reviews" class="tab-content">
                     <h3>Valoraciones recibidas por otros usuarios</h3>
-                     <div class="review-card">
+                    <div class="review-card">
                         <div class="review-header">
                             <span class="review-author">GrooveGuardian</span>
                             <div class="review-rating"><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span></div>
@@ -65,6 +66,62 @@
                             <div class="review-rating"><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span></div>
                         </div>
                         <p class="review-comment">"¡Una joya! Comunicación excelente."</p>
+                    </div>
+                </div>
+
+                <div id="tab-history" class="tab-content">
+                    <h3>Mis compras</h3>
+                    <div class="purchase-history-list">
+                        <article class="purchase-card">
+                            <img src="https://picsum.photos/seed/order1/120/120" alt="Portada de Nevermind" class="purchase-cover">
+                            <div class="purchase-details">
+                                <h4 class="purchase-title">Nevermind</h4>
+                                <p class="purchase-meta">Nirvana · Comprado el 14/04/2026</p>
+                                <p class="purchase-meta">Vendido por <strong>WaxWizard</strong></p>
+                                <div class="purchase-tags">
+                                    <span class="purchase-status delivered">Entregado</span>
+                                    <span class="purchase-price">29,90 €</span>
+                                </div>
+                            </div>
+                            <div class="purchase-actions">
+                                <a href="leave-rating.html" class="btn btn-secondary">Valorar compra</a>
+                                <a href="vinyl-logged.html" class="btn btn-primary">Ver vinilo</a>
+                            </div>
+                        </article>
+
+                        <article class="purchase-card">
+                            <img src="https://picsum.photos/seed/order2/120/120" alt="Portada de Abbey Road" class="purchase-cover">
+                            <div class="purchase-details">
+                                <h4 class="purchase-title">Abbey Road</h4>
+                                <p class="purchase-meta">The Beatles · Comprado el 05/04/2026</p>
+                                <p class="purchase-meta">Vendido por <strong>SpinMaster</strong></p>
+                                <div class="purchase-tags">
+                                    <span class="purchase-status shipping">En reparto</span>
+                                    <span class="purchase-price">28,50 €</span>
+                                </div>
+                            </div>
+                            <div class="purchase-actions">
+                                <a href="leave-rating.html" class="btn btn-secondary">Valorar compra</a>
+                                <a href="vinyl-logged.html" class="btn btn-primary">Ver vinilo</a>
+                            </div>
+                        </article>
+
+                        <article class="purchase-card">
+                            <img src="https://picsum.photos/seed/order3/120/120" alt="Portada de Random Access Memories" class="purchase-cover">
+                            <div class="purchase-details">
+                                <h4 class="purchase-title">Random Access Memories</h4>
+                                <p class="purchase-meta">Daft Punk · Comprado el 23/03/2026</p>
+                                <p class="purchase-meta">Vendido por <strong>ClassicCuts</strong></p>
+                                <div class="purchase-tags">
+                                    <span class="purchase-status delivered">Entregado</span>
+                                    <span class="purchase-price">31,20 €</span>
+                                </div>
+                            </div>
+                            <div class="purchase-actions">
+                                <a href="leave-rating.html" class="btn btn-secondary">Valorar compra</a>
+                                <a href="vinyl-logged.html" class="btn btn-primary">Ver vinilo</a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -96,7 +153,14 @@
 
                     <div class="profile-actions">
                         <a href="edit-profile.html" class="btn btn-primary btn-full-width">Editar Perfil</a>
-                        <button class="btn btn-secondary btn-full-width">Enviar Mensaje</button>
+                        <a href="manage-my-vinyls.html" class="btn btn-secondary btn-full-width" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <span class="material-icons">inventory_2</span>
+                            Modificar vinilos en venta
+                        </a>
+                        <a href="index.html" class="btn btn-logout btn-full-width">
+                            <span class="material-icons">logout</span>
+                            Cerrar Sesión
+                        </a>
                     </div>
                 </div>
             </aside>
@@ -111,5 +175,29 @@
     </footer>
     
     <script src="../js/script.js"></script>
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart" class="close-btn">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+
+        <div id="cart-items-container" class="cart-items">
+            <div class="empty-cart-msg">Your cart is empty</div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-amount">0,00 €</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-full-width" style="text-align: center; display: block;">
+            Checkout
+            </a>
+        </div>
+    </div>
+
+<div id="cart-overlay" class="cart-overlay"></div>
 </body>
 </html>

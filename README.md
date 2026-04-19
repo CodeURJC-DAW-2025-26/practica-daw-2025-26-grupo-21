@@ -70,3 +70,86 @@ Automated email sending to notify users when their vinyl has been sold or when t
 
 ## Advanced Algorithm or Query
 Vinyl recommendations for registered users while they are viewing a vinyl record. They will appear at the bottom of the page. Recommendations will be based on the attributes of the vinyl records they have already purchased.
+
+# Preparation 2: Layout of pages with HTML and CSS
+
+## Anonymous user pages
+
+### View/Search vinyls
+![Index](assets/screenshots/anonymous/index.png)
+
+### View vinyl details
+![View Vinyl Details](assets/screenshots/anonymous/vinyl.png)
+
+### Register
+![Register](assets/screenshots/anonymous/register.png)
+
+### Login
+![Login](assets/screenshots/anonymous/login.png)
+
+## Registered user pages
+
+### View/Search vinyls
+![Index](assets/screenshots/registered/index.png)
+
+### View vinyl details
+![View Vinyl Details](assets/screenshots/registered/vinyl.png)
+
+### List vinyl for sale
+![List Vinyl for Sale](assets/screenshots/registered/list-new-vinyl.png)
+
+### Logout
+![Logout](assets/screenshots/registered/logout.png)
+
+### Edit own vinyls
+![Edit Vinyl](assets/screenshots/registered/manage-vinyls.png)
+
+### Buy new vinyl
+![Buy Vinyl](assets/screenshots/registered/cart.png)
+
+### View purchase history
+![View Purchase History](assets/screenshots/registered/purchase-history.png)
+
+### Leave a rating
+![Leave a Rating](assets/screenshots/registered/rating.png)
+
+### Modify own profile
+![Modify Profile](assets/screenshots/registered/edit-profile.png)
+
+## Admin pages
+
+### View/Search vinyls
+![Index](assets/screenshots/admin/index.png)
+
+### View vinyl details
+![View Vinyl Details](assets/screenshots/admin/vinyl.png)
+
+### List vinyl for sale
+![List Vinyl for Sale](assets/screenshots/admin/list-new-vinyl.png)
+
+### Logout
+![Logout](assets/screenshots/admin/logout.png)
+
+### Edit own vinyls
+![Edit Vinyl](assets/screenshots/admin/manage-vinyls.png)
+
+### Buy new vinyl
+![Buy Vinyl](assets/screenshots/admin/cart.png)
+
+### View purchase history
+![View Purchase History](assets/screenshots/admin/purchase-history.png)
+
+### Leave a rating
+![Leave a Rating](assets/screenshots/admin/rating.png)
+
+### Modify own profile
+![Modify Profile](assets/screenshots/admin/edit-profile.png)
+
+### Manage all users
+![Admin User Management](assets/screenshots/admin/admin-users.png)
+
+### Manage all vinyls
+![Admin Vinyl Management](assets/screenshots/admin/admin-vinyls.png)
+
+### View platform statistics
+![Platform Statistics](assets/screenshots/admin/dashboard.png)

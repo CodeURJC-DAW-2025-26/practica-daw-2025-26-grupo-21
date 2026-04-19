@@ -1,0 +1,14 @@
+/* Search Results Styles */
+.search-header {
+    margin: 3rem 0;
+}
+
+.search-header h1 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.search-header p {
+    color: var(--text-secondary);
+}

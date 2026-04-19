@@ -1,0 +1,23 @@
+/* --- Star Rating Style --- */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.star-rating input { display: none; }
+
+.star-rating label {
+    font-size: 2.5rem;
+    color: var(--border-color);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: var(--accent-color);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found - La Phonoteka</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Specific styles for the Error Page */
+        .error-page {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--bg-color); /* Uses your Gruvbox background */
+        }
+
+        .error-icon {
+            font-size: 10rem;
+            color: var(--border-color);
+            margin-bottom: 1rem;
+        }
+
+        .error-code {
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--accent-color); /* Gruvbox Orange/Red */
+            margin: 0;
+            line-height: 1;
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin: 1rem 0 2rem;
+        }
+
+        .error-description {
+            color: var(--text-secondary);
+            max-width: 400px;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .btn-home {
+            padding: 12px 32px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <main class="error-page container">
+        <span class="material-icons error-icon">album</span>
+        
+        <h1 class="error-code">404</h1>
+        <p class="error-message">Oops! The needle skipped.</p>
+        
+        <p class="error-description">
+            The track you are looking for is not in our collection. 
+            It might have been removed or the link is broken.
+        </p>
+        
+        <a href="index.html" class="btn btn-primary btn-home">Back to the Shop</a>
+    </main>
+</body>
+</html>

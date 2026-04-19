@@ -1,3 +1,5 @@
+@import url('cart.css');
+@import url('forms.css');
 :root {
     /* Gruvbox Light Theme (Default) */
     --bg-color: #fbf1c7;
@@ -198,6 +200,16 @@ body {
     object-fit: cover; 
 }
 
+.vinyl-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.vinyl-card-link:hover {
+    text-decoration: none;
+}
+
 .card-content { 
     padding: 1.5rem; 
 }
@@ -319,6 +331,31 @@ body {
     padding: 2rem 0;
     font-size: 0.9rem;
     transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* --- Header Profile Button --- */
+
+.btn-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: var(--border-radius-lg);
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 700;
+    transition: background-color 0.2s;
+    border: 1px solid transparent;
+}
+
+.btn-profile:hover {
+    background-color: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+.btn-profile .material-icons {
+    font-size: 24px;
+    color: var(--accent-color); 
 }
 
 /* --- Responsive --- */
