@@ -73,83 +73,115 @@ Vinyl recommendations for registered users while they are viewing a vinyl record
 
 # Preparation 2: Layout of pages with HTML and CSS
 
+## Navigation diagram
+Red: admin
+Green: Anonymous
+Blue: Registered
+
+![Navigation Diagram](assets/diagrams/navigation.png)
+
 ## Anonymous user pages
 
 ### View/Search vinyls
+Anon user can view and search vinyls in the main page.
 ![Index](assets/screenshots/anonymous/index.png)
 
 ### View vinyl details
+Anon user can view the details of a vinyl.
 ![View Vinyl Details](assets/screenshots/anonymous/vinyl.png)
 
 ### Register
+Anon user can be registered.
 ![Register](assets/screenshots/anonymous/register.png)
 
 ### Login
+Anon user can log in.
 ![Login](assets/screenshots/anonymous/login.png)
 
 ## Registered user pages
 
 ### View/Search vinyls
+Registered user can view and search vinyls in the main page.
 ![Index](assets/screenshots/registered/index.png)
 
 ### View vinyl details
+Registered user can view the details of a vinyl.
 ![View Vinyl Details](assets/screenshots/registered/vinyl.png)
 
 ### List vinyl for sale
+Registered user can list vinyls for sale.
 ![List Vinyl for Sale](assets/screenshots/registered/list-new-vinyl.png)
 
 ### Logout
+Registered user can log out.
 ![Logout](assets/screenshots/registered/logout.png)
 
 ### Edit own vinyls
+Registered user can edit his own vinyls in sale.
 ![Edit Vinyl](assets/screenshots/registered/manage-vinyls.png)
 
-### Buy new vinyl
+### Buy vinyl
+Registered user can buy vinyls.
 ![Buy Vinyl](assets/screenshots/registered/cart.png)
 
 ### View purchase history
+Registered user can see his purchase history.
 ![View Purchase History](assets/screenshots/registered/purchase-history.png)
 
 ### Leave a rating
+Registered user can leave ratings in his purchases.
 ![Leave a Rating](assets/screenshots/registered/rating.png)
 
 ### Modify own profile
+Registered user can modify his own profile.
 ![Modify Profile](assets/screenshots/registered/edit-profile.png)
 
 ## Admin pages
 
 ### View/Search vinyls
+Admin can view and search vinyls.
 ![Index](assets/screenshots/admin/index.png)
 
 ### View vinyl details
+Admin can view the details of a vinyl.
 ![View Vinyl Details](assets/screenshots/admin/vinyl.png)
 
 ### List vinyl for sale
+Admin can list vinyls for sale.
 ![List Vinyl for Sale](assets/screenshots/admin/list-new-vinyl.png)
 
 ### Logout
+Admin can log out.
 ![Logout](assets/screenshots/admin/logout.png)
 
 ### Edit own vinyls
+Admin can edit his own vinyls.
 ![Edit Vinyl](assets/screenshots/admin/manage-vinyls.png)
 
 ### Buy new vinyl
+Admin can buy new vinyls.
 ![Buy Vinyl](assets/screenshots/admin/cart.png)
 
 ### View purchase history
+Admin can see the purchase history.
 ![View Purchase History](assets/screenshots/admin/purchase-history.png)
 
 ### Leave a rating
+Admin can leave ratings.
 ![Leave a Rating](assets/screenshots/admin/rating.png)
 
 ### Modify own profile
+Admin can modify his own profile.
 ![Modify Profile](assets/screenshots/admin/edit-profile.png)
 
 ### Manage all users
+Admin can manage the users of the app.
 ![Admin User Management](assets/screenshots/admin/admin-users.png)
 
 ### Manage all vinyls
+Admin can manage the vinyls of the app.
 ![Admin Vinyl Management](assets/screenshots/admin/admin-vinyls.png)
 
 ### View platform statistics
+Admin can view app statistics.
 ![Platform Statistics](assets/screenshots/admin/dashboard.png)
