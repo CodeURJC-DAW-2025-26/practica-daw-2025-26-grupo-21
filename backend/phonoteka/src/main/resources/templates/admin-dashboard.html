@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - La Phonoteka</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin-dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index-logged.html" class="logo">La Phonoteka <span class="admin-badge">ADMIN</span></a>
+            <nav class="user-actions">
+                <a href="profile.html" class="btn-profile">
+                    <span class="material-icons">admin_panel_settings</span>
+                    <span>Admin Profile</span>
+                </a>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="material-icons">light_mode</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="dashboard-title">Platform Overview</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">Total Sales</span>
+                <span class="stat-number">1,240 €</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">New Users</span>
+                <span class="stat-number">+45</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Active Listings</span>
+                <span class="stat-number">312</span>
+            </div>
+        </div>
+
+        <div class="charts-layout">
+            <div class="chart-container">
+                <h3>Sales over time (Line)</h3>
+                <div class="chart-placeholder"> <div class="dummy-line-chart"></div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3>New User Registrations (Line)</h3>
+                <div class="chart-placeholder">
+                    <div class="dummy-line-chart"></div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3>Vinyl Distribution by Genre (Pie)</h3>
+                <div class="chart-placeholder">
+                    <div class="dummy-pie-chart"></div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h3>Top Selling Users (Ranking)</h3>
+                <ul class="ranking-list">
+                    <li>1. VinylVortex - 15 sales</li>
+                    <li>2. GrooveGuardian - 12 sales</li>
+                    <li>3. WaxWizard - 9 sales</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage My Vinyls - La Phonoteka</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admin-management.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body data-theme="light">
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index-logged.html" class="logo">La Phonoteka</a>
+            <nav class="user-actions">
+                <a href="profile.html" class="btn-profile">
+                    <span class="material-icons">account_circle</span>
+                    <span class="username-text">My Profile</span>
+                </a>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="material-icons">light_mode</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="admin-header">
+            <h1>My Shop Inventory</h1>
+            <p>You have 3 active listings in the marketplace.</p>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Vinyl</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="vinyl-cell">
+                                <img src="https://picsum.photos/seed/vinyl1/50/50" alt="cover">
+                                <div>
+                                    <p class="table-main-text">AM</p>
+                                    <p class="table-sub-text">Arctic Monkeys</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price-cell">33,50 €</td>
+                        <td><span class="status-indicator active">Published</span></td>
+                        <td class="actions-cell">
+                            <button class="action-btn edit"><span class="material-icons">edit</span></button>
+                            <button class="action-btn delete"><span class="material-icons">delete</span></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-bottom: 4rem;">
+            <a href="add-vinyl.html" class="btn btn-primary">List New Vinyl</a>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
