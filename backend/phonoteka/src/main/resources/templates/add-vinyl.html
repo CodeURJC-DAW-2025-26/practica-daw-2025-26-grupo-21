@@ -34,22 +34,22 @@
             <h1>List a New Vinyl</h1>
             <p>Fill in the details to put your record up for sale.</p>
 
-            <form class="add-vinyl-form">
+            <form class="add-vinyl-form" method="post" action="/vinyl/add" enctype="multipart/form-data">
                 <div class="form-section">
                     <div class="form-group">
                         <label for="vinyl-title">Album Title</label>
-                        <input type="text" id="vinyl-title" placeholder="e.g. Discovery" required>
+                        <input type="text" id="vinyl-title" name="title" placeholder="e.g. Discovery" required>
                     </div>
                     <div class="form-group">
                         <label for="vinyl-artist">Artist</label>
-                        <input type="text" id="vinyl-artist" placeholder="e.g. Daft Punk" required>
+                        <input type="text" id="vinyl-artist" name="artist" placeholder="e.g. Daft Punk" required>
                     </div>
                 </div>
 
                 <div class="form-section">
                     <div class="form-group">
                         <label for="vinyl-genre">Genre</label>
-                        <select id="vinyl-genre" required>
+                        <select id="vinyl-genre" name="genre" required>
                             <option value="" disabled selected>Select a genre</option>
                             <option value="Rock">Rock</option>
                             <option value="Pop">Pop</option>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="form-group">
                         <label for="vinyl-price">Price (€)</label>
-                        <input type="number" id="vinyl-price" step="0.01" placeholder="29.99" required>
+                        <input type="number" id="vinyl-price" name="price" step="0.01" placeholder="29.99" required>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@
                     <div class="image-upload-box">
                         <span class="material-icons">add_a_photo</span>
                         <p>Click to upload or drag and drop</p>
-                        <input type="file" id="vinyl-image" accept="image/*" required>
+                        <input type="file" id="vinyl-image" name="image" accept="image/*" required>
                     </div>
                 </div>
 

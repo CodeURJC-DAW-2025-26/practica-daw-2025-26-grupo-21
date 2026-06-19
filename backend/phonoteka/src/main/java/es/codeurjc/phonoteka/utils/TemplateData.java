@@ -86,4 +86,8 @@ public final class TemplateData {
         item.put("cover", cover);
         return item;
     }
+
+    public static String vinylHref(int id, boolean logged) {
+        return "/vinyl/" + id + (logged ? "?logged=true" : "");
+    }
 }

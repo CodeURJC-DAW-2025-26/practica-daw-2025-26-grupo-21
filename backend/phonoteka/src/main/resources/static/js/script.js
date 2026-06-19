@@ -31,11 +31,12 @@ const renderCheckoutSummary = () => {
     finalTotalElement.textContent = `${(subtotal + shipping).toFixed(2).replace('.', ',')} €`;
 };
 
-function createVinylCard(vinylData, detailPage = '/vinyl') {
+function createVinylCard(vinylData, logged = false) {
     // Generates a random seed for unique placeholder images
     const randomSeed = Math.random().toString(16).substring(2, 8);
     const imageUrl = `https://picsum.photos/seed/${randomSeed}/400/400`;
     const formattedPrice = `${vinylData.price.toFixed(2).replace('.', ',')} €`;
+    const detailPage = logged ? `/vinyl/${vinylData.id}?logged=true` : `/vinyl/${vinylData.id}`;
 
     // Wrap the card in an <a> tag to link to the detail page
     return `
@@ -96,6 +97,7 @@ for (let i = 0; i < 20; i++) {
     const randomPrice = Math.random() * (50 - 15) + 15;
 
     vinylsData.push({
+        id: i + 1,
         title: albumInfo.title,
         artist: albumInfo.artist,
         genre: albumInfo.genre,
@@ -110,8 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.querySelector('.vinyl-grid');
     if (gallery) {
         const isLoggedHomepage = window.location.search.includes('logged=true') || !!document.getElementById('cart-btn') || !!document.querySelector('.btn-profile');
-        const detailPage = isLoggedHomepage ? '/vinyl?logged=true' : '/vinyl';
-        gallery.innerHTML = vinylsData.map(vinyl => createVinylCard(vinyl, detailPage)).join('');
+        gallery.innerHTML = vinylsData.map(vinyl => createVinylCard(vinyl, isLoggedHomepage)).join('');
     }
 
     // 2. Render Checkout (if on checkout page)

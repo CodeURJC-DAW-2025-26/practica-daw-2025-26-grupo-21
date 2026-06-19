@@ -4,6 +4,8 @@ import java.util.List;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import static es.codeurjc.phonoteka.utils.PhonotekaLogger.log;
 import static es.codeurjc.phonoteka.utils.TemplateData.checkoutItem;
 
@@ -11,7 +13,7 @@ import static es.codeurjc.phonoteka.utils.TemplateData.checkoutItem;
 @Controller
 public class TransactionController {
 
-    @GetMapping("/transaction/checkout")
+    @RequestMapping(value = "/transaction/checkout", method = {RequestMethod.GET, RequestMethod.POST})
     public String checkout(Model model) {
         log.info("Checkout page requested");
     model.addAttribute("pageTitle", "Checkout - La Phonoteka");
@@ -36,7 +38,7 @@ public class TransactionController {
         return "checkout";
     }
 
-    @GetMapping("/transaction/leave-rating")
+    @RequestMapping(value = "/transaction/leave-rating", method = {RequestMethod.GET, RequestMethod.POST})
     public String leaveRating() {
         log.info("Leave rating page requested");
         return "leave-rating";

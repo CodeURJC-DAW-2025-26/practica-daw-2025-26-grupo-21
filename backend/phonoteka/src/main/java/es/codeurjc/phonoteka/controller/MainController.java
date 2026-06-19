@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import static es.codeurjc.phonoteka.utils.PhonotekaLogger.log;
 import static es.codeurjc.phonoteka.utils.TemplateData.vinylCard;
+import static es.codeurjc.phonoteka.utils.TemplateData.vinylHref;
 
 @Controller
 public class MainController {
@@ -37,16 +38,16 @@ public class MainController {
         model.addAttribute("vinyls", List.of(
                 vinylCard("The Dark Side of the Moon", "Pink Floyd", "Rock progresivo", "35,00 €",
                         "https://picsum.photos/seed/home1/400/400",
-                        "Portada de The Dark Side of the Moon", "/vinyl?logged=true"),
+                        "Portada de The Dark Side of the Moon", vinylHref(1, logged)),
                 vinylCard("Abbey Road", "The Beatles", "Rock", "28,50 €",
                         "https://picsum.photos/seed/home2/400/400",
-                        "Portada de Abbey Road", "/vinyl?logged=true"),
+                        "Portada de Abbey Road", vinylHref(2, logged)),
                 vinylCard("Nevermind", "Nirvana", "Grunge", "29,90 €",
                         "https://picsum.photos/seed/home3/400/400",
-                        "Portada de Nevermind", "/vinyl?logged=true"),
+                        "Portada de Nevermind", vinylHref(4, logged)),
                 vinylCard("Currents", "Tame Impala", "Psychedelic Pop", "38,00 €",
                         "https://picsum.photos/seed/home4/400/400",
-                        "Portada de Currents", "/vinyl?logged=true")));
+                        "Portada de Currents", vinylHref(19, logged))));
 
         return "index";
     }

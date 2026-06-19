@@ -3,7 +3,6 @@ package es.codeurjc.phonoteka.controller;
 import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,7 +32,7 @@ public class SessionController {
         return "login";
     }
 
-    @GetMapping("/session/register")
+    @RequestMapping(value = "/session/register", method = {RequestMethod.GET, RequestMethod.POST})
     public String register(Model model) {
         log.info("Register page requested");
         model.addAttribute("pageTitle", "Registro - La Phonoteka");
