@@ -31,7 +31,7 @@ const renderCheckoutSummary = () => {
     finalTotalElement.textContent = `${(subtotal + shipping).toFixed(2).replace('.', ',')} €`;
 };
 
-function createVinylCard(vinylData, detailPage = 'vinyl.html') {
+function createVinylCard(vinylData, detailPage = '/vinyl') {
     // Generates a random seed for unique placeholder images
     const randomSeed = Math.random().toString(16).substring(2, 8);
     const imageUrl = `https://picsum.photos/seed/${randomSeed}/400/400`;
@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Render Gallery (if on homepage)
     const gallery = document.querySelector('.vinyl-grid');
     if (gallery) {
-        const isLoggedHomepage = window.location.pathname.includes('index-logged.html');
-        const detailPage = isLoggedHomepage ? 'vinyl-logged.html' : 'vinyl.html';
+        const isLoggedHomepage = window.location.search.includes('logged=true') || !!document.getElementById('cart-btn') || !!document.querySelector('.btn-profile');
+        const detailPage = isLoggedHomepage ? '/vinyl?logged=true' : '/vinyl';
         gallery.innerHTML = vinylsData.map(vinyl => createVinylCard(vinyl, detailPage)).join('');
     }
 
