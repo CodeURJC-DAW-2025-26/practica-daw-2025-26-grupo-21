@@ -1,57 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results - La Phonoteka</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/search-results.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+<html lang="es">
+{{>partials/head}}
 <body data-theme="light">
 
-    <header class="site-header">
-        <div class="container header-container">
-            <a href="index-logged.html" class="logo">La Phonoteka</a>
-            <div class="search-bar">
-                <span class="material-icons">search</span>
-                <input type="text" value="Pink Floyd"> </div>
-            <nav class="user-actions">
-                <a href="profile.html" class="btn-profile">
-                    <span class="material-icons">account_circle</span>
-                    <span class="username-text">My Profile</span>
-                </a>
-                <button class="theme-toggle" id="theme-toggle">
-                    <span class="material-icons">light_mode</span>
-                </button>
-            </nav>
-        </div>
-    </header>
+{{>partials/header}}
 
-    <main class="container">
-        <div class="search-header">
-            <h1>Results for "Pink Floyd"</h1>
-            <p>We found 4 vinyl records matching your search.</p>
-        </div>
+<main class="container">
+    <div class="search-header">
+        <h1>Resultados para "{{query}}"</h1>
+        <p>Hemos encontrado {{resultCount}} vinilos que coinciden con tu búsqueda.</p>
+    </div>
 
-        <section class="vinyl-grid">
-            <div class="vinyl-card">
-                <img src="https://picsum.photos/seed/pf1/400/400" alt="Cover">
+    <section class="vinyl-grid">
+        {{#results}}
+        <article class="vinyl-card">
+            <a href="{{href}}" class="vinyl-card-link">
+                <img src="{{image}}" alt="{{alt}}">
                 <div class="card-content">
-                    <h3 class="vinyl-title">The Dark Side of the Moon</h3>
-                    <p class="vinyl-artist">Pink Floyd</p>
+                    <h3 class="vinyl-title">{{title}}</h3>
+                    <p class="vinyl-artist">{{artist}}</p>
                     <div class="card-footer">
-                        <span class="vinyl-genre">Rock</span>
-                        <span class="vinyl-price">35,00 €</span>
+                        <span class="vinyl-genre">{{genre}}</span>
+                        <span class="vinyl-price">{{price}}</span>
                     </div>
                 </div>
-            </div>
-            </section>
-    </main>
+            </a>
+        </article>
+        {{/results}}
+        {{^results}}
+        <p>No se han encontrado vinilos con ese criterio.</p>
+        {{/results}}
+    </section>
+</main>
 
-    <script src="/js/script.js"></script>
+{{>partials/footer}}
+<script src="/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<header class="site-header">
+    <div class="container header-container">
+        <a href="{{homeHref}}" class="logo">La Phonoteka</a>
+
+        {{#showSearchBar}}
+        <div class="search-bar">
+            <span class="material-icons">search</span>
+            <input type="text" value="{{searchValue}}" placeholder="{{searchPlaceholder}}">
+        </div>
+        {{/showSearchBar}}
+
+        <nav class="user-actions">
+            {{#showCartButton}}
+            <button class="cart-button" id="cart-btn" aria-label="View shopping cart">
+                <span class="material-icons">shopping_cart</span>
+                <span class="cart-badge" id="cart-count">{{cartCount}}</span>
+            </button>
+            {{/showCartButton}}
+
+            {{#showProfileLink}}
+            <a href="{{profileHref}}" class="btn-profile">
+                <span class="material-icons">account_circle</span>
+                <span class="username-text">{{profileLabel}}</span>
+            </a>
+            {{/showProfileLink}}
+
+            {{#showAuthButtons}}
+            <a href="{{loginHref}}" class="btn btn-secondary">Iniciar Sesión</a>
+            <a href="{{registerHref}}" class="btn btn-primary">Registrarse</a>
+            {{/showAuthButtons}}
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                <span class="material-icons icon-light">light_mode</span>
+                <span class="material-icons icon-dark">dark_mode</span>
+            </button>
+        </nav>
+    </div>
+</header>
