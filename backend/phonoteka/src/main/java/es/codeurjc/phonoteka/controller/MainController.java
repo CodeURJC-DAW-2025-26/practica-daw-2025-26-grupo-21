@@ -1,22 +1,25 @@
 package es.codeurjc.phonoteka.controller;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import es.codeurjc.phonoteka.service.VinylService;
 import static es.codeurjc.phonoteka.utils.PhonotekaLogger.log;
-import static es.codeurjc.phonoteka.utils.TemplateData.vinylCard;
-import static es.codeurjc.phonoteka.utils.TemplateData.vinylHref;
 
 @Controller
 public class MainController {
+
+    @Autowired
+    private VinylService vinylService;
 
     @GetMapping("/")
     public String home(@RequestParam(defaultValue = "false") boolean logged, Model model) {
         log.info("Home page requested");
 
-        model.addAttribute("pageTitle", "La Phonoteka - Descubre y Colecciona Vinilos");
+        model.addAttribute("pageTitle", "La Phonoteka - Descubre y Colecciona Vinylos");
         model.addAttribute("styles", List.of("/css/style.css"));
         model.addAttribute("homeHref", logged ? "/?logged=true" : "/");
         model.addAttribute("showSearchBar", true);
@@ -35,19 +38,7 @@ public class MainController {
                 : "Descubre, Colecciona y Vende Vinilos");
         model.addAttribute("heroText", logged ? "Sigue explorando las joyas que tenemos para tu colección."
                 : "El punto de encuentro para amantes de la música en formato físico.");
-        model.addAttribute("vinyls", List.of(
-                vinylCard("The Dark Side of the Moon", "Pink Floyd", "Rock progresivo", "35,00 €",
-                        "https://picsum.photos/seed/home1/400/400",
-                        "Portada de The Dark Side of the Moon", vinylHref(1, logged)),
-                vinylCard("Abbey Road", "The Beatles", "Rock", "28,50 €",
-                        "https://picsum.photos/seed/home2/400/400",
-                        "Portada de Abbey Road", vinylHref(2, logged)),
-                vinylCard("Nevermind", "Nirvana", "Grunge", "29,90 €",
-                        "https://picsum.photos/seed/home3/400/400",
-                        "Portada de Nevermind", vinylHref(4, logged)),
-                vinylCard("Currents", "Tame Impala", "Psychedelic Pop", "38,00 €",
-                        "https://picsum.photos/seed/home4/400/400",
-                        "Portada de Currents", vinylHref(19, logged))));
+        model.addAttribute("vinyls", vinylService.getFeaturedVinyls(logged));
 
         return "index";
     }

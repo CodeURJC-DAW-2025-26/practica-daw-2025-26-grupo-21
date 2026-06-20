@@ -1,17 +1,21 @@
 package es.codeurjc.phonoteka.controller;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import es.codeurjc.phonoteka.service.TransactionService;
 import static es.codeurjc.phonoteka.utils.PhonotekaLogger.log;
-import static es.codeurjc.phonoteka.utils.TemplateData.checkoutItem;
 
 
 @Controller
 public class TransactionController {
+
+    @Autowired
+    private TransactionService transactionService;
 
     @RequestMapping(value = "/transaction/checkout", method = {RequestMethod.GET, RequestMethod.POST})
     public String checkout(Model model) {
@@ -24,16 +28,10 @@ public class TransactionController {
     model.addAttribute("showProfileLink", false);
     model.addAttribute("showAuthButtons", false);
     model.addAttribute("showCartDrawer", false);
-    model.addAttribute("orderItems", List.of(
-        checkoutItem("Nevermind", "Nirvana", "1", "29,90 €",
-            "https://picsum.photos/seed/order1/120/120"),
-        checkoutItem("Abbey Road", "The Beatles", "1", "28,50 €",
-            "https://picsum.photos/seed/order2/120/120"),
-        checkoutItem("Random Access Memories", "Daft Punk", "1", "31,20 €",
-            "https://picsum.photos/seed/order3/120/120")));
-    model.addAttribute("subtotal", "89,60 €");
-    model.addAttribute("shipping", "4,50 €");
-    model.addAttribute("total", "94,10 €");
+    model.addAttribute("orderItems", transactionService.getOrderItems());
+    model.addAttribute("subtotal", transactionService.getSubtotal());
+    model.addAttribute("shipping", transactionService.getShipping());
+    model.addAttribute("total", transactionService.getTotal());
 
         return "checkout";
     }

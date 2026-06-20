@@ -1,13 +1,17 @@
 package es.codeurjc.phonoteka.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import es.codeurjc.phonoteka.service.AdminService;
 import static es.codeurjc.phonoteka.utils.PhonotekaLogger.log;
 
 
 @Controller
 public class AdminController {
 
+    @Autowired
+    private AdminService adminService;
 
     @GetMapping("/admin/dashboard")
     public String dashboard() {
